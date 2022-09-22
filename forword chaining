@@ -1,0 +1,48 @@
+#include<iostream.h>
+#include<conio.h>
+char database[4][10]={"Croaks","Eat Flies","Shrimps","Sings"};
+char knowbase[4][10]={"Frog","Canary","Green","Yellow"};
+int k=0,x=0;
+void display();//display text
+void main()
+{
+clrscr();
+cout<<"*-----Forward--Chaning-----*";
+display();
+cout<<" \n";
+if(x==1 || x== 2)
+{
+cout<<" Chance Of Frog ";
+}
+else if(x==3 || x==4)
+{
+cout<<" Chance of Canary ";
+}
+else
+{
+cout<<"\n-------In Valid Option Select --------";
+}
+if(x>=1 && x<=4)
+{
+cout<<"\n X is "<<database[x-1];
+cout<<"\n Color Is 1.Green 2.Yellow";
+cout<<"\n Select Option  ";
+cin>>k;
+
+if(k==1 && (x==1 || x==2))//frog0 and green1
+cout<<" yes it is "<<knowbase[0]<<" And Color Is "<<knowbase[2];
+else if(k==2 &&(x==3 || x==4))//canary1 and yellow3
+cout<<" yes it is "<<knowbase[1]<<" And Color Is "<<knowbase[3];
+else
+{
+cout<<"\n---InValid Knowledge Database";
+}
+}
+getch();
+}
+void display()
+{
+cout<<"\n X is \n1.Croaks \n2.Eat Flies \n3.shrimps \n4.Sings ";
+cout<<"\n Select One ";
+cin>>x;
+}
